@@ -1,6 +1,14 @@
 #include "SecretSanta.h"
 #include <string>
 
+SecretSanta::SecretSanta() {
+	this->name = "";
+	this->wishList = "";
+}
+SecretSanta::SecretSanta(std::string name) {
+	this->name = name;
+	this->wishList = "";
+}
 SecretSanta::SecretSanta(std::string name, std::string wishList) {
 	this->name = name;
 	this->wishList = wishList;
@@ -15,7 +23,10 @@ std::string SecretSanta::getWishList() const {
 }
 	
 void SecretSanta::addToWishList(std::string item) {
-	this->wishList = this->wishList + ", " + item;
+	if (this->wishList = "")
+		this->wishList += item;
+	else
+		this->wishList = this->wishList + ", " + item;
 }
 	
 void SecretSanta::removeFromWishList(std::string item) {
