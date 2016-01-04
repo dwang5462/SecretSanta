@@ -17,8 +17,6 @@ public:
 	std::string getWishList() const;
 	void addToWishList(std::string item);
 	void removeFromWishList(std::string item);
-	std::string getRecipient() const;
-	std::string getRecipientWishList() const;
 	SecretSanta getRecipient() const;
 	std::string getRecipientWishlist() const;
 
@@ -29,7 +27,3 @@ private:
 };
 
 #endif
-
-
-};
-
