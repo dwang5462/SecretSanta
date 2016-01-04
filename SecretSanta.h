@@ -3,7 +3,7 @@
 
 #include <iostream>
 #include <string>
-#include <math>
+//#include <math>
 #include <random>
 
 class SecretSanta {
@@ -23,3 +23,5 @@ private:
 	std::string wishList;
 	SecretSanta* recipient;
 };
+
+#endif
