@@ -29,8 +29,7 @@ private:
 };
 
 #endif
-=======
 
 
 };
->>>>>>> origin/master
+
