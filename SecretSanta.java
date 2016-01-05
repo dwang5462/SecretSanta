@@ -1,4 +1,3 @@
-
 public class SecretSanta {
 	private String name;
 	private String wishList;
