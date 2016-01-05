@@ -1,8 +1,8 @@
 
 public class SecretSanta {
-	String name;
-	String wishList;
-	SecretSanta recipient;
+	private String name;
+	private String wishList;
+	private SecretSanta recipient;
 	
 	SecretSanta(){
 		name = "";
