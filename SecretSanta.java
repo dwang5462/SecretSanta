@@ -1,32 +1,45 @@
 public class SecretSanta {
 	private String name;
-	private String wishList;
+	private WishList santaWishList;
 	private SecretSanta recipient;
 	
+	class WishList {
+		private ArrayList<String> list;
+
+		wishList() {
+			list = new ArrayList<String>();
+		}
+
+		String toString() {
+			return list.toString();
+		}
+
+		void addToWishList(String item){
+			list.add(item);
+		}
+		void removeFromWishList(String item){
+			list.remove(item);
+		}
+	}
 	SecretSanta(){
 		name = "";
-		wishList = "";
+		santaWishList = new Wishlist();
 	}
 	SecretSanta(String santaName){
 		name = santaName;
-		wishList = "";
+		santaWishList = new Wishlist();
 	}
-	SecretSanta(String santaName, String wishL){
+	SecretSanta(String santaName, Wishlist wishL){
 		name = santaName;
-		wishList = wishL;
+		santaWishList = wishL;
 	}
 	String getName(){
 		return name;
 	}
-	String getWishList(){
-		return wishList;
+	Wishlist getWishList(){
+		return santaWishList;
 	}
-	void addToWishList(String item){
-		wishList += item;
-	}
-	void removeFromWishList(String item){
-		
-	}
+	
 	SecretSanta getRecipient(){
 		return recipient;
 	}
@@ -34,6 +47,9 @@ public class SecretSanta {
 		recipient = recip;
 	}
 	String getRecipientWishList(){
-		return recipient.getWishList();
+		return recipient.getWishList().toString();
+	}
+	String toString() {
+		return "Name: " + name + "\n" + "Wishlist: " + santaWishList.toString();
 	}
 }
