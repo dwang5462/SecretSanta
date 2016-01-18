@@ -2,7 +2,6 @@ public class SecretSantaTester {
 	public static void main(String[] args){
 		SecretSanta fred = new SecretSanta("Fred","Chess Set");
 		SecretSanta bob = new SecretSanta("Bob", "Bouncy Ball");
-		System.out.println(fred.getRecipient().getName());
 		fred.setRecipient(bob);
 		SecretSantaList listSS = new SecretSantaList(2);
 		listSS.addSecretSanta(fred);
