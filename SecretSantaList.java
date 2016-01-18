@@ -11,8 +11,6 @@ public class SecretSantaList{
 	void addSecretSanta(SecretSanta person){
 		santasList.add(person);
 		numSantasInList++;
-		}
-
 	}
 	void deleteSecretSanta(SecretSanta person){
 		santasList.remove(person);
@@ -28,16 +26,16 @@ public class SecretSantaList{
 		for(int i = 0; i<numSantasInList; i++){
 			int randomPos = (int)(Math.random()*numSantasInList);
 			SecretSanta tempSanta = santasList.get(i);
-			santasList.get(i) = santasList.get(randomPos);
-			santasList.get(randomPos) = tempSanta;
+			santasList.set(i, santasList.get(randomPos));
+			santasList.set(randomPos, tempSanta);
 		}
 
 	}
 	void setAllRecipients(){
 		for(int i = 0; i < numSantasInList-1; i++){
-			santasList.get(i).setRecipient(santasList.get(i+1);
+			santasList.get(i).setRecipient(santasList.get(i+1));
 		}
-		santasList[numSantasInList-1].setRecipient(santasList[0]);
+		santasList.get(numSantasInList-1).setRecipient(santasList.get(0));
 
 
 	}

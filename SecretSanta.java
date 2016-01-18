@@ -39,7 +39,7 @@ public class SecretSanta {
 	String getName(){
 		return name;
 	}
-	Wishlist getWishList(){
+	WishList getWishList(){
 		return santaWishList;
 	}
 	
