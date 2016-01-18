@@ -6,7 +6,7 @@ public class SecretSanta {
 	class WishList {
 		private ArrayList<String> list;
 
-		wishList() {
+		WishList() {
 			list = new ArrayList<String>();
 		}
 
@@ -29,9 +29,10 @@ public class SecretSanta {
 		name = santaName;
 		santaWishList = new Wishlist();
 	}
-	SecretSanta(String santaName, Wishlist wishL){
+	SecretSanta(String santaName, String item){
 		name = santaName;
-		santaWishList = wishL;
+		santaWishList = new Wishlist();
+		santaWishList.addToWishList(item);
 	}
 	String getName(){
 		return name;
