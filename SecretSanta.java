@@ -12,7 +12,7 @@ public class SecretSanta {
 			list = new ArrayList<String>();
 		}
 
-		String toString() {
+		String outputList() {
 			return list.toString();
 		}
 
@@ -25,15 +25,15 @@ public class SecretSanta {
 	}
 	SecretSanta(){
 		name = "";
-		santaWishList = new Wishlist();
+		santaWishList = new WishList();
 	}
 	SecretSanta(String santaName){
 		name = santaName;
-		santaWishList = new Wishlist();
+		santaWishList = new WishList();
 	}
 	SecretSanta(String santaName, String item){
 		name = santaName;
-		santaWishList = new Wishlist();
+		santaWishList = new WishList();
 		santaWishList.addToWishList(item);
 	}
 	String getName(){
@@ -52,7 +52,7 @@ public class SecretSanta {
 	String getRecipientWishList(){
 		return recipient.getWishList().toString();
 	}
-	String toString() {
+	String output() {
 		return "Name: " + name + "\n" + "Wishlist: " + santaWishList.toString();
 	}
 }
