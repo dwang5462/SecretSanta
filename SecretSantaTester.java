@@ -3,27 +3,27 @@ public class SecretSantaTester {
 		SecretSanta fred = new SecretSanta("Fred","Chess Set");
 		SecretSanta bob = new SecretSanta("Bob", "Bouncy Ball");
 		fred.setRecipient(bob);
-		SecretSantaList listSS = new SecretSantaList(2);
+		SecretSantaList listSS = new SecretSantaList();
 		listSS.addSecretSanta(fred);
 		listSS.addSecretSanta(bob);
 
 		System.out.println("Number of santas in the list: " + listSS.getNumSantasInList());
-		System.out.println("1st Santa in the list: " + listSS.getSantasList()[0].getName());
-		System.out.println("2nd Santa in the list: " + listSS.getSantasList()[1].getName());
+		System.out.println("1st Santa in the list: " + listSS.getSantasList().get(0).getName());
+		System.out.println("2nd Santa in the list: " + listSS.getSantasList().get(1).getName());
 		
 		listSS.randomizeOrder();
-		System.out.println("1st Santa in the list: " + listSS.getSantasList()[0].getName());
-		System.out.println("2nd Santa in the list: " + listSS.getSantasList()[1].getName());
+		System.out.println("1st Santa in the list: " + listSS.getSantasList().get(0).getName());
+		System.out.println("2nd Santa in the list: " + listSS.getSantasList().get(1).getName());
 		
 
 		listSS.setAllRecipients();
-		System.out.println("1st Santa's recipient is : " +  listSS.getSantasList()[0].getRecipient().getName());
-		System.out.println("2nd Santa's recipient is : " +  listSS.getSantasList()[1].getRecipient().getName());
+		System.out.println("1st Santa's recipient is : " +  listSS.getSantasList().get(0).getRecipient().getName());
+		System.out.println("2nd Santa's recipient is : " +  listSS.getSantasList().get(1).getRecipient().getName());
 
 
 
 		listSS.deleteSecretSanta(fred);
-		System.out.println("1st Santa in the list: " + listSS.getSantasList()[0].getName());
+		System.out.println("1st Santa in the list: " + listSS.getSantasList().get(0).getName());
 		System.out.println("Number of santas in the list: " + listSS.getNumSantasInList());
 		
 		System.out.println("The first Secret Santa is called " + fred.getName());
